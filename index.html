@@ -8,6 +8,8 @@
     <script src="https://kit.fontawesome.com/3e1a4784df.js" crossorigin="anonymous"></script>
     <!-- cascading style-sheet -->
      <link rel="stylesheet" href="style.css">
+     <!-- chart -->
+     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 </head>
 <body>
     <div class="navigation-bar">
@@ -21,13 +23,20 @@
                 alt="" class="profile-img"  id="profile-image">
             </div>
             <div>
-
+                <img src="https://www.freepik.com/free-ai-image/portrait-man-cartoon-style_137497745.htm#fromView=search&page=1&position=0&uuid=4fab3012-5823-4e77-ac04-54ba9278cf24&query=guy+cartoon" 
+                alt="Profile Image">
             </div>
-            <h2>Profile</h2>
-            <ul>
-                <li>Edit Profile</li>
-                <li>Sign out</li>
-            </ul>
+            <div class="profile-img-placeholder">
+                <i class="fa-solid fa-user"></i>
+            </div>
+            <div class="profile-img"></div>
+            <div class="profile-options">
+                <ul>
+                    <li><a href="">Profile</a></li>
+                    <li><a href="">Edit Profile</a></li>
+                    <li><a href="">Sign out</a></li>
+                </ul>
+            </div>
             <div class="light-dark-mode-container">
                 <i class="fa-solid fa-sun fa-2x"></i>
                 <i class="fa-solid fa-moon fa-2x"></i>
@@ -135,15 +144,15 @@
 
 
     <main>
-        <section>
+        <section class="welcome-section">
             <div class="Dashboard-welcome-container">
                 <h1>Welcome</h1>
                 <h2 class="landlords-name"></h2>
                 <h1 class="property-name"></h1>
             </div>
             <div>
-                <img src="" 
-                alt="" class="welcome-dashboard-img">
+                <img src="https://www.freepik.com/free-ai-image/modern-residential-district-with-green-roof-balcony-generated-by-ai_40970640.htm#fromView=search&page=1&position=0&uuid=7488feb1-ea32-475f-a85c-9f8a7c98852d&query=home" 
+                alt="Propery Image" class="welcome-dashboard-img">
             </div>
         </section>
 
@@ -187,9 +196,13 @@
         </section>
 
         <section class="stat-chat">
-
+            <h1>Graphical Representation</h1>
+            <canvas id="myChart"></canvas>
         </section>
     </main>
     
+
+    <!-- javascript -->
+     <script src="chart.js"></script>
 </body>
 </html>

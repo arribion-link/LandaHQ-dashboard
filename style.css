@@ -33,10 +33,16 @@ main{
 }
 
 aside{
+    z-index: -10;
+    right: 0;
+    top: 0;
+    height: auto;
     padding-top: 8em;
     margin-left: 80vw;
     position: fixed;
     max-width: 20vw;
+    background-color: rgba(49, 46, 46, 0.434);
+    padding: 4em;
 }
 /* Arribion Adverticement */
 .navigation-bar{
@@ -50,19 +56,39 @@ aside{
     color: white;
     background-color: dodgerblue;
     display: flex;
-    justify-content: center;
+    justify-content: flex-end;
 
 }
 
 .profile{
     display: flex;
     justify-content: space-around;
-    gap: 3em;
+    gap: 1em;
 }
 
+
+.profile-options{
+    /* development */
+    display: none;
+
+    position: absolute;
+    width: auto;
+    height: auto;
+    background-color: white;
+    color: black;
+    padding: 4em;
+    margin-top: 2em;
+    border-radius: 20px 0px;
+}
+
+
+
 /* main-content */
+.welcome-section{
+    display: flex;
+}
 .Dashboard-welcome-container{
-    height: 10vh;
+    height: ;
     width: 55vw;
     background-color: white;
     border-radius: 10px;
@@ -88,4 +114,10 @@ aside{
     height: 5em;
     background-color: white;
     margin: 2em 0em 2em 0em;
+}
+
+
+/* Graphical section */
+.stat-chat{
+    margin-top: 4em;
 }
