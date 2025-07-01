@@ -3,151 +3,152 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LandaHQ | property management system | arribion technologies</title>
-    <!-- fontawesome -->
+    <title>LandaHQ | Modern Property Management</title>
+    
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome -->
     <script src="https://kit.fontawesome.com/3e1a4784df.js" crossorigin="anonymous"></script>
-    <!-- cascading style-sheet -->
-     <link rel="stylesheet" href="style.css">
-     <!-- chart -->
-     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    
+    <!-- Chart.js -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Your Stylesheet -->
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    
 
-    <header>
-       
-
-        <h1 class="logo">LandaHQ</h1>
-        <nav>
-            <ul>
-                <div>
-                    <i class="fa-solid fa-house-user fa-2x"></i>
-                    <li><a href="">Dashboard</a></li>
-                </div>
-                <div>
-                    <i class="fa-solid fa-user-group fa-2x"></i>
-                    <li><a href="">Tenants</a></li>
-                </div>
-                <div>
-                    <i class="fa-solid fa-hotel fa-2x"></i>
-                    <li><a href="">Properties</a></li>
-                </div>
-                <div>
-                    <i class="fa-solid fa-credit-card fa-2x"></i>
-                    <li><a href="">Payment</a></li>
-                </div>
-                <div>
-                    <i class="fa-solid fa-wrench fa-2x"></i>
-                    <li><a href="">Maintanance</a></li>
-                </div>
-                <div>
-                    <i class="fa-solid fa-gear fa-2x"></i>
-                    <li><a href="">Setting</a></li>
-                </div>
-            </ul>
-        </nav>
-    </header>
-
-
-    <main>
-        <div class="navigation-bar">
-            <div class="profile">
-                
-                <div class="notification-container">
-                    <i class="fa-regular fa-bell fa-2x"></i>
-                </div>
-                <div class="profile-img-container">
-                    <img src="" 
-                    alt="" class="profile-img"  id="profile-image">
-                </div>
-                <div>
-                    <img src="https://www.freepik.com/free-ai-image/portrait-man-cartoon-style_137497745.htm#fromView=search&page=1&position=0&uuid=4fab3012-5823-4e77-ac04-54ba9278cf24&query=guy+cartoon" 
-                    alt="Profile Image">
-                </div>
-                <div class="profile-img-placeholder">
-                    <i class="fa-solid fa-user"></i>
-                </div>
-                <div class="profile-img"></div>
-                <div class="profile-options">
-                    <ul>
-                        <li><a href="">Profile</a></li>
-                        <li><a href="">Edit Profile</a></li>
-                        <li><a href="">Sign out</a></li>
-                    </ul>
-                </div>
-                <div class="light-dark-mode-container">
-                    <i class="fa-solid fa-sun fa-2x"></i>
-                    <i class="fa-solid fa-moon fa-2x"></i>
-                </div>
-            </div>      
-        </div>
-
-        
-        <section class="welcome-section">
-            <div class="Dashboard-welcome-container">
-                <h1>Welcome</h1>
-                <h2 class="landlords-name"></h2>
-                <h1 class="property-name"></h1>
+    <div class="dashboard-container">
+        <!-- ===== Sidebar ===== -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h1 class="logo">LandaHQ</h1>
             </div>
-            <div>
-                <img src="https://www.freepik.com/free-ai-image/modern-residential-district-with-green-roof-balcony-generated-by-ai_40970640.htm#fromView=search&page=1&position=0&uuid=7488feb1-ea32-475f-a85c-9f8a7c98852d&query=home" 
-                alt="Propery Image" class="welcome-dashboard-img">
+            <nav class="sidebar-nav">
+                <a href="#" class="nav-link active">
+                    <i class="fa-solid fa-house-user"></i>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-user-group"></i>
+                    <span>Tenants</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-hotel"></i>
+                    <span>Properties</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-credit-card"></i>
+                    <span>Payment</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-wrench"></i>
+                    <span>Maintenance</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                 <a href="#" class="nav-link">
+                    <i class="fa-solid fa-gear"></i>
+                    <span>Settings</span>
+                </a>
+                <a href="#" class="nav-link">
+                    <i class="fa-solid fa-right-from-bracket"></i>
+                    <span>Logout</span>
+                </a>
             </div>
-        </section>
+        </aside>
 
-        <section class="main-stats-chats">
+        <!-- ===== Main Content ===== -->
+        <main class="main-content">
+            <!-- Top Header -->
+            <header class="main-header">
+                <div class="header-left">
+                    <button class="menu-toggle" id="menu-toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                    <div class="search-bar">
+                        <i class="fa-solid fa-search"></i>
+                        <input type="search" placeholder="Search properties, tenants...">
+                    </div>
+                </div>
+                <div class="header-right">
+                    <button class="icon-button">
+                        <i class="fa-regular fa-bell"></i>
+                        <span class="notification-dot"></span>
+                    </button>
+                    <div class="user-profile">
+                        <img src="https://i.pravatar.cc/150?u=a042581f4e29026704d" alt="User Profile Image">
+                        <div class="user-info">
+                            <span class="user-name">John Doe</span>
+                            <span class="user-role">Landlord</span>
+                        </div>
+                    </div>
+                </div>
+            </header>
 
-            <div class="stats-card">
-                <h2>Total property</h2>
-                <p>38</p>
-            </div>
+            <!-- Welcome Section -->
+            <section class="welcome-section">
+                <div class="welcome-content">
+                    <h2 class="welcome-title">Welcome Back, John!</h2>
+                    <p class="welcome-subtitle">Here's your property overview for Sunshine Hostels.</p>
+                </div>
+                <div class="welcome-image-container">
+                    <img src="https://img.freepik.com/free-photo/low-angle-shot-facade-white-modern-building-blue-clear-sky_181624-48219.jpg?w=1380" 
+                         alt="Property Image" class="welcome-image">
+                </div>
+            </section>
 
-            <div class="stats-card">
-                <h2>Active Tenants</h2>
-                <p>38</p>
-            </div>
+            <!-- Stats Grid -->
+            <section class="stats-grid">
+                <div class="stats-card">
+                    <div class="card-icon" style="background-color: #e0f7fa;"><i class="fa-solid fa-hotel" style="color: #0097a7;"></i></div>
+                    <h3>Total Properties</h3>
+                    <p>38</p>
+                </div>
+                <div class="stats-card">
+                    <div class="card-icon" style="background-color: #e8f5e9;"><i class="fa-solid fa-user-check" style="color: #388e3c;"></i></div>
+                    <h3>Active Tenants</h3>
+                    <p>124</p>
+                </div>
+                <div class="stats-card">
+                    <div class="card-icon" style="background-color: #e3f2fd;"><i class="fa-solid fa-chart-line" style="color: #1976d2;"></i></div>
+                    <h3>Monthly Revenue</h3>
+                    <p>$120,000</p>
+                </div>
+                <div class="stats-card">
+                    <div class="card-icon" style="background-color: #f3e5f5;"><i class="fa-solid fa-percent" style="color: #7b1fa2;"></i></div>
+                    <h3>Occupancy Rate</h3>
+                    <p>87.5%</p>
+                </div>
+                <div class="stats-card">
+                    <div class="card-icon" style="background-color: #fff3e0;"><i class="fa-solid fa-file-invoice-dollar" style="color: #f57c00;"></i></div>
+                    <h3>Outstanding</h3>
+                    <p>$38,000</p>
+                </div>
+                 <div class="stats-card">
+                    <div class="card-icon" style="background-color: #ffebee;"><i class="fa-solid fa-wrench" style="color: #d32f2f;"></i></div>
+                    <h3>Maintenance</h3>
+                    <p>2 Pending</p>
+                </div>
+            </section>
 
-            <div class="stats-card">
-                <h2>Monthly Revenue</h2>
-                <p>120,000</p>
-            </div>
+            <!-- Chart Section -->
+            <section class="chart-container">
+                <h3>Revenue vs. Expenses (Last 6 Months)</h3>
+                <canvas id="myChart"></canvas>
+            </section>
+        </main>
+    </div>
 
-            <div class="stats-card">
-                <h2>Total Paid</h2>
-                <p>90,000,654</p>
-            </div>
-
-            <div class="stats-card">
-                <h2>Outstanding Balance</h2>
-                <p>38,000</p>
-            </div>
-
-            <div class="stats-card">
-                <h2>Occupancy Rate</h2>
-                <p>67.0%</p>
-            </div>
-
-            <div class="stats-card">
-                <h2>Pending Maintanance</h2>
-                <p>2</p>
-            </div>
-
-        </section>
-
-
-        <section class="stat-chat">
-            <h1>Graphical Representation</h1>
-            <canvas id="myChart"></canvas>
-        </section>
-    </main>
-
-    <aside>
-        <h1>Pending Payment</h1>
-    </aside>
-    
-    
-
-    <!-- javascript -->
-     <script src="chart.js"></script>
+    <!-- JavaScript for Mobile Menu -->
+    <script>
+        document.getElementById('menu-toggle').addEventListener('click', function() {
+            document.querySelector('.sidebar').classList.toggle('sidebar-open');
+        });
+    </script>
+    <script src="chart.js"></script>
 </body>
 </html>
